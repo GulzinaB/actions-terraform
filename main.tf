@@ -1,10 +1,10 @@
 provider aws {
-    region = "us-east-1"
+    region = var.region 
 }
 
 resource "aws_instance" "web" {
   ami           = var.ami_id
-  instance_type = var.inatance_type
+  instance_type = var.instance_type
 }
 
 variable region {}
